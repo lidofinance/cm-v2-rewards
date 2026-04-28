@@ -1,0 +1,29 @@
+---
+name: Automated update
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  hoodi:
+    if: ${{ vars.DISTRIBUTOR_HOODI != '' }}
+    uses: lidofinance/csm-rewards/.github/workflows/_update.yml@action
+    with:
+      chain: hoodi
+      distributor: ${{ vars.DISTRIBUTOR_HOODI }}
+      source_repository: lidofinance/csm-rewards
+    secrets: inherit
+
+  mainnet:
+    if: ${{ vars.DISTRIBUTOR_MAINNET != '' }}
+    uses: lidofinance/csm-rewards/.github/workflows/_update.yml@action
+    with:
+      chain: mainnet
+      distributor: ${{ vars.DISTRIBUTOR_MAINNET }}
+      source_repository: lidofinance/csm-rewards
+    secrets: inherit

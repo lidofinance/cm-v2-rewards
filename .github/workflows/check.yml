@@ -1,0 +1,28 @@
+---
+name: Regular checks
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"
+  workflow_dispatch:
+
+jobs:
+  hoodi:
+    if: ${{ vars.DISTRIBUTOR_HOODI != '' }}
+    uses: lidofinance/csm-rewards/.github/workflows/_check.yml@action
+    with:
+      notify: true
+      chain: hoodi
+      distributor: ${{ vars.DISTRIBUTOR_HOODI }}
+      source_repository: lidofinance/csm-rewards
+    secrets: inherit
+
+  mainnet:
+    if: ${{ vars.DISTRIBUTOR_MAINNET != '' }}
+    uses: lidofinance/csm-rewards/.github/workflows/_check.yml@action
+    with:
+      notify: true
+      chain: mainnet
+      distributor: ${{ vars.DISTRIBUTOR_MAINNET }}
+      source_repository: lidofinance/csm-rewards
+    secrets: inherit
