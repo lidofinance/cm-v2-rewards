@@ -1,1 +1,46 @@
-{}
+{
+  "format": "standard-v1",
+  "leafEncoding": [
+    "uint256",
+    "uint256"
+  ],
+  "tree": [
+    "0x4e8c0eada409273226452ac8f9975044853befc133e115ab5046dadebd4e6d7d",
+    "0x5fc3d97b0d071c7170f624a5f0f46c59ad3d0f5205c1f22311a33cbb8fa7c495",
+    "0x8ab7158236fab2e76735b71afa811327e52f8a003e91b7e8f1130e699fc8ab1f",
+    "0x7f6606d31ca7ca1719d84738f8585c40924abb9c48dcceaa106414a9f38a4a75",
+    "0x77203a2e5c71bbd404b22c3d1297f087867b19d8993e9296418c5229e8b7c001",
+    "0x6a854f1ecd4c9634ad72bad49f7db68a68b59b18a4dbc2bb6a06a60d90ad95e1",
+    "0x17b2933d359104a2bf18bf8305c8ff206d90c26ab2c8d1707d822c4c123eda5d"
+  ],
+  "values": [
+    {
+      "value": [
+        0,
+        1271330587292459
+      ],
+      "treeIndex": 4
+    },
+    {
+      "value": [
+        2,
+        1293924050479885
+      ],
+      "treeIndex": 5
+    },
+    {
+      "value": [
+        3,
+        536146467701615
+      ],
+      "treeIndex": 3
+    },
+    {
+      "value": [
+        7,
+        1280654873687270
+      ],
+      "treeIndex": 6
+    }
+  ]
+}
